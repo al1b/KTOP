@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KTOP.CLI", "KTOP\KTOP.CLI.csproj", "{4295A5AC-BDA4-454A-9E00-1977C79A93A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KTOP.Base", "KTOP.Base\KTOP.Base.csproj", "{555E565E-66C5-45EA-879F-4CE02BBCB24B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{741E1452-EE83-4301-B689-4C405415DBC2} = {741E1452-EE83-4301-B689-4C405415DBC2}
+		{31D46FA2-02F5-4732-92DC-4789B149356B} = {31D46FA2-02F5-4732-92DC-4789B149356B}
+		{881161F7-9F18-4EF5-8DE1-E60963EDB202} = {881161F7-9F18-4EF5-8DE1-E60963EDB202}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KTOP.EBookReader", "KTOP.EBookReader\KTOP.EBookReader.csproj", "{31D46FA2-02F5-4732-92DC-4789B149356B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KTOP.Helper", "KTOP.Helper\KTOP.Helper.csproj", "{881161F7-9F18-4EF5-8DE1-E60963EDB202}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArabicShaping", "ArabicShaping\ArabicShaping.csproj", "{741E1452-EE83-4301-B689-4C405415DBC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KTOP.UnitTests", "KTOP.UnitTests\KTOP.UnitTests.csproj", "{DF32DEC3-C1D9-45A0-8F3F-C9628111BF85}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User Interface", "User Interface", "{A6A2FF07-224C-499B-B870-2423DE50ED97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4295A5AC-BDA4-454A-9E00-1977C79A93A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4295A5AC-BDA4-454A-9E00-1977C79A93A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4295A5AC-BDA4-454A-9E00-1977C79A93A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4295A5AC-BDA4-454A-9E00-1977C79A93A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{555E565E-66C5-45EA-879F-4CE02BBCB24B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{555E565E-66C5-45EA-879F-4CE02BBCB24B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{555E565E-66C5-45EA-879F-4CE02BBCB24B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{555E565E-66C5-45EA-879F-4CE02BBCB24B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31D46FA2-02F5-4732-92DC-4789B149356B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31D46FA2-02F5-4732-92DC-4789B149356B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31D46FA2-02F5-4732-92DC-4789B149356B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31D46FA2-02F5-4732-92DC-4789B149356B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{881161F7-9F18-4EF5-8DE1-E60963EDB202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{881161F7-9F18-4EF5-8DE1-E60963EDB202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{881161F7-9F18-4EF5-8DE1-E60963EDB202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{881161F7-9F18-4EF5-8DE1-E60963EDB202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{741E1452-EE83-4301-B689-4C405415DBC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{741E1452-EE83-4301-B689-4C405415DBC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{741E1452-EE83-4301-B689-4C405415DBC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF32DEC3-C1D9-45A0-8F3F-C9628111BF85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF32DEC3-C1D9-45A0-8F3F-C9628111BF85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF32DEC3-C1D9-45A0-8F3F-C9628111BF85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF32DEC3-C1D9-45A0-8F3F-C9628111BF85}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4295A5AC-BDA4-454A-9E00-1977C79A93A6} = {A6A2FF07-224C-499B-B870-2423DE50ED97}
+	EndGlobalSection
+EndGlobal
