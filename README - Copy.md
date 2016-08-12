@@ -2,7 +2,7 @@
 Kindle Text Optimizer for Persian eBooks.
 
 ## What is KTOP? What does it do?
-
+------
 KTOP is a tool for increasing the readability of Persian and Arabic eBooks on Amazon Kindle. By releasing [KF8](https://www.amazon.com/gp/feature.html?docId=1000729511) by Amazon, Kindle devices are be able to display right-to-left Persian and Arabic books. Unfortunately the default font for Persian and Arabic eBooks is not really good and it has also several drawbacks and I believe that is not acceptable.
 
 **Default Font:**
@@ -30,7 +30,7 @@ By using *KTOP* you can optimize your eBooks to display properly and nicely on K
 
 
 ## How to use
-
+------
 KTOP has a command line interface at the moment which is really easy to use.
 
 It has 3 options:
@@ -50,15 +50,12 @@ KTOP.CLI.exe "d:\my-books\programming\csharp.epub" /a /p /cs
 
 Notes:
 1. For Arabic eBooks just use `/cs` option.
-
 2. For Persian eBooks it is recommended to use all options above.
-
 3. `/p` Option might takes several minutes, so be patient.
-
 4. By using `/p` option you will get a log file of what *KTOP* corrected on your eBook.
 
 ## Requirements
-
+------
 *KTOP* is written in Microsoft C# and it needs NetFramework 4.5 to be run on your Windows. You can download NetFramework from Microsoft.
 
 1. [NetFramework 4.6.1](https://www.microsoft.com/en-us/download/details.aspx?id=49982)
@@ -66,7 +63,7 @@ Notes:
 
 
 ## Roadmap
-
+------
 
 1. Support `awz3` and `mobi` formats.
 2. Graphical User Interface rather than CLI
