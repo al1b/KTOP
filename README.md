@@ -23,7 +23,7 @@ By using *KTOP* you can optimize your eBooks to display properly and nicely on K
 
 
 ## Sample outputs
-------
+
 | Default font        | Custom font           | Optimized by ***KTOP*** - Custom font  |
 | :-------------: |:-------------:| :-----:|
 |![Default font](https://al1b.github.io/KTOP/02-default-font.jpg)|![Custom font](https://al1b.github.io/KTOP/03-custom-font.jpg)|![Optimized font](https://al1b.github.io/KTOP/01-optimized.jpg)|
