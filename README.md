@@ -3,7 +3,7 @@ Kindle Text Optimizer for Persian eBooks.
 
 ## What is KTOP? What does it do?
 
-KTOP is a tool for increasing the readability of Persian and Arabic eBooks on Amazon Kindle. By releasing [KF8](https://www.amazon.com/gp/feature.html?docId=1000729511) by Amazon, Kindle devices are be able to display right-to-left Persian and Arabic books. Unfortunately the default font for Persian and Arabic eBooks is not really good and it has also several drawbacks and I believe that is not acceptable.
+*KTOP* is a tool for increasing the readability of Persian and Arabic eBooks on Amazon Kindle. By releasing [KF8](https://www.amazon.com/gp/feature.html?docId=1000729511) by Amazon, Kindle devices are be able to display right-to-left Persian and Arabic books. Unfortunately the default font of Kindle is not really good and it has also several drawbacks.
 
 **Default Font:**
 
