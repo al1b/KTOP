@@ -54,6 +54,7 @@ Notes:
 2. For Persian eBooks it is recommended to use all options above.
 3. `/p` Option might takes several minutes, so be patient.
 4. By using `/p` option you will get a log file of what *KTOP* corrected on your eBook.
+5. *KTOP* won't replace and save changes on the original file, it will create another file next to the original one.
 
 ## Requirements
 
