@@ -10,7 +10,7 @@ Kindle Text Optimizer for Persian eBooks.
 
 ![Default Font](https://al1b.github.io/KTOP/kindle-default-font.jpg) 
 
-Users and publishers can ship/embedded custom fonts into their `epub`, `mobi` and `azw3` eBook files. Amazon Kindle doesn't display Persian and Arabic eBooks properly with custom fonts. It will display Persian/Arabic letters separated!
+Users and publishers can ship/embedded custom fonts into their `epub`, `mobi` and `azw3` eBook files. Amazon Kindle doesn't display Persian and Arabic eBooks properly with custom fonts. It will display letters separated.
 
 
 ![separated letters](https://al1b.github.io/KTOP/kindle-seperated-persian-text.jpg) 
