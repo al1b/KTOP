@@ -39,7 +39,7 @@ It has 3 options:
 | :------------- |:-------------|
 |/a|Replace any Arabic Keh and Yeh with Persian Yeh and Keh letters.|
 |/cs|Correct spelling mistakes and typos ( only for Persian eBooks ).|
-|/p|Convert Persian/Arabic letters into single unicode character.|
+|/p|Optimize the book by converting Persian/Arabic letters into single unicode character.|
 
 Example:
 
