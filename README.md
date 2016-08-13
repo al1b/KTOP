@@ -50,7 +50,7 @@ KTOP.CLI.exe "d:\my-books\programming\csharp.epub" /a /p /cs
 
 Notes:
 
-1. For Arabic eBooks just use `/cs` option.
+1. For Arabic eBooks just use `/p` option.
 2. For Persian eBooks it is recommended to use all options above.
 3. `/cs` Option might takes several minutes, so be patient.
 4. By using `/cs` option you will get a log file of what *KTOP* corrected on your eBook.
