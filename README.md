@@ -38,8 +38,8 @@ It has 3 options:
 | Option       | Description          |
 | :------------- |:-------------|
 |/a|Replace any Arabic Keh and Yeh with Persian Yeh and Keh letters.|
-|/p|Correct spelling mistakes and typos ( only for Persian eBooks ).|
-|/cs|Convert Persian/Arabic letters into single unicode character.|
+|/cs|Correct spelling mistakes and typos ( only for Persian eBooks ).|
+|/p|Convert Persian/Arabic letters into single unicode character.|
 
 Example:
 
@@ -52,8 +52,8 @@ Notes:
 
 1. For Arabic eBooks just use `/cs` option.
 2. For Persian eBooks it is recommended to use all options above.
-3. `/p` Option might takes several minutes, so be patient.
-4. By using `/p` option you will get a log file of what *KTOP* corrected on your eBook.
+3. `/cs` Option might takes several minutes, so be patient.
+4. By using `/cs` option you will get a log file of what *KTOP* corrected on your eBook.
 5. *KTOP* won't replace and save changes on the original file, it will create another file next to the original one.
 
 ## Requirements
