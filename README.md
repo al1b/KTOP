@@ -67,7 +67,7 @@ Notes:
 ## Roadmap
 
 
-1. Support `awz3` and `mobi` formats.
+1. Support `azw3` and `mobi` formats.
 2. Graphical User Interface rather than CLI
 3. Compatibility with Mono or DOTNet Core ( be able to run on Linux or Mac )
 
