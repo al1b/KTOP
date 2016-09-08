@@ -1,6 +1,7 @@
 # KTOP
 Kindle Text Optimizer for Persian eBooks.
 
+
 ## What is KTOP? What does it do?
 
 *KTOP* is a tool for increasing the readability of Persian and Arabic eBooks on Amazon Kindle. By releasing [KF8](https://www.amazon.com/gp/feature.html?docId=1000729511) by Amazon, Kindle devices are be able to display right-to-left Persian and Arabic books. Unfortunately the default font of Kindle is not really good and it has also several drawbacks.
@@ -37,31 +38,40 @@ It has 3 options:
 
 | Option       | Description          |
 | :------------- |:-------------|
-|/a|Replace any Arabic Keh and Yeh with Persian Yeh and Keh letters.|
-|/cs|Correct spelling mistakes and typos ( only for Persian eBooks ).|
-|/p|Optimize the book by converting Persian/Arabic letters into single unicode character.|
+|--persian|Optimize the book for Kindle, Replace all Arabic characters|
+|--arabic|Optimize the book for Arabic books|
 
 Example:
 
+
 ```
-KTOP.CLI.exe "d:\my-books\programming\csharp.epub" /a /p /cs
+Windows:
+KTOP.exe "d:\my-books\programming\csharp.epub"
+
+Linux and Mac:
+./KTOP "./csharp.epub"
 ```
-
-
-Notes:
-
-1. For Arabic eBooks just use `/p` option.
-2. For Persian eBooks it is recommended to use all options above.
-3. `/cs` Option might takes several minutes, so be patient.
-4. By using `/cs` option you will get a log file of what *KTOP* corrected on your eBook.
-5. *KTOP* won't replace and save changes on the original file, it will create another file next to the original one.
 
 ## Requirements
 
-*KTOP* is written in Microsoft C# and it needs NetFramework 4.5 to be run on your Windows. You can download NetFramework from Microsoft.
+*KTOP* is written in Microsoft C# and [.NET Core](https://github.com/dotnet/core) and it can be run on Linux, Mac OSX and Microsoft Windows. You need to download and install .NET Core on your os.
 
-1. [NetFramework 4.6.1](https://www.microsoft.com/en-us/download/details.aspx?id=49982)
-2. [NetFramework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=42642)
+***Windows:***
+Download and install [.NET Core](https://go.microsoft.com/fwlink/?LinkID=809109)
+
+***Linux:***
+Depend on what distro you are using you need to install .NET Core runtime.
+
+1. [.NET Core Ubuntu 14.04, 16.04 & Linux Mint 17](http://www.microsoft.com/net/core#ubuntu)
+2. [.NET Core Debian 8](http://www.microsoft.com/net/core#debian)
+3. [.NET Core Fedora 23](http://www.microsoft.com/net/core#fedora)
+4. [.NET Core CentOS 7.1 & Oracle Linux 7.1](http://www.microsoft.com/net/core#centos)
+5. [.NET Core openSUSE 13.2](http://www.microsoft.com/net/core#opensuse)
+6. [.NET Core openSUSE 13.2](http://www.microsoft.com/net/core#opensuse)
+
+***Mac OS X:***
+[.NET Core For Mac OS X 10.11](http://www.microsoft.com/net/core#macos)
+
 
 
 ## Roadmap
@@ -69,6 +79,4 @@ Notes:
 
 1. Support `azw3` and `mobi` formats.
 2. Graphical User Interface rather than CLI
-3. Compatibility with Mono or DOTNet Core ( be able to run on Linux or Mac )
-
-
+3. ~~Compatibility with Mono or DOTNet Core ( be able to run on Linux or Mac )~~
