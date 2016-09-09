@@ -47,8 +47,6 @@ namespace KTOP.CLI
                 watch.Stop();
                 Console.WriteLine($"The book has successfully optmized in {watch.Elapsed.Minutes} minutes and {watch.Elapsed.Seconds} seconds.\r\n");
                 Console.WriteLine($"File has saved in:\r\n{path}");
-
-
             }
             catch (Exception ex)
             {
@@ -110,28 +108,6 @@ KTOP.CLI.exe fileName  [--persian, --arabic]
 
 
            throw new Exceptions.ParameterException();
-        }
-
-        /// <summary>
-        /// Each file might have several mistakes in spelling, this method will create a well-formed log of them
-        /// </summary>
-        /// <param name="erros"></param>
-        /// <returns></returns>
-        static string GenerateErrorSpellingLog(Dictionary<string, List<string>> erros)
-        {
-            var builder = new StringBuilder();
-
-            foreach (var key in erros.Keys)
-            {
-                builder.AppendLine(key);
-                builder.AppendLine("--------------------");
-                foreach (var item in erros[key])
-                    builder.AppendLine(item);
-
-                builder.AppendLine();
-            }
-
-            return builder.ToString();
         }
     }
 }

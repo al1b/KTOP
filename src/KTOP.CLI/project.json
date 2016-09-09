@@ -17,13 +17,13 @@
     "KTOP.Base": "1.0.0-*",
     "KTOP.Helper": "1.0.0-*",
     "Microsoft.NETCore.App": {
+      //"type": "platform",
       "version": "1.0.0"
     }
   },
 
   "frameworks": {
-    "netcoreapp1.0": {
-      "imports": "dnxcore50"
+    "netcoreapp1.0": {      
     }
   }
 }

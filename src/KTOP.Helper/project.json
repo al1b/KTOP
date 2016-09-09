@@ -1,11 +1,6 @@
 {
   "version": "1.0.0-*",
 
-  "runtimes": {
-    "linux-x64": {},
-    "win7-x64": {}
-  },
-
   "dependencies": {
     "Microsoft.NETCore.App": {
       "version": "1.0.0"
@@ -14,7 +9,7 @@
 
   "frameworks": {
     "netcoreapp1.0": {
-      "imports": "dnxcore50"
+      
     }
   }
 }

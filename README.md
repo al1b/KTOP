@@ -11,7 +11,7 @@ Kindle Text Optimizer for Persian eBooks.
 
 ![Default Font](https://al1b.github.io/KTOP/kindle-default-font.jpg) 
 
-Users and publishers can ship/embedded custom fonts into their `epub`, `mobi` and `azw3` eBook files. Amazon Kindle doesn't display Persian and Arabic eBooks properly with custom fonts. It will display letters separated.
+Books can be published with embedded fonts but Amazon Kindle won't display Persian and Arabic eBooks properly with embedded fonts and It will display characters separated.
 
 
 ![separated letters](https://al1b.github.io/KTOP/kindle-seperated-persian-text.jpg) 
@@ -46,7 +46,7 @@ Example:
 
 ```
 Windows:
-KTOP.exe "d:\my-books\programming\csharp.epub"
+KTOP.exe "d:/my-books/programming/csharp.epub"
 
 Linux and Mac:
 ./KTOP "./csharp.epub"
@@ -67,7 +67,6 @@ Depend on what distro you are using you need to install .NET Core runtime.
 3. [.NET Core Fedora 23](http://www.microsoft.com/net/core#fedora)
 4. [.NET Core CentOS 7.1 & Oracle Linux 7.1](http://www.microsoft.com/net/core#centos)
 5. [.NET Core openSUSE 13.2](http://www.microsoft.com/net/core#opensuse)
-6. [.NET Core openSUSE 13.2](http://www.microsoft.com/net/core#opensuse)
 
 ***Mac OS X:***
 [.NET Core For Mac OS X 10.11](http://www.microsoft.com/net/core#macos)
