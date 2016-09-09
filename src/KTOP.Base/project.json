@@ -6,10 +6,10 @@
     "Microsoft.NETCore.App": {
       "version": "1.0.0"
     },
-    "ArabicShaping": "1.0.0-*",
+    "ArabicShaping": "1.5.0-*",
     "Autofac": "4.0.0",
-    "KTOP.EBookReader": "1.0.0-*",
-    "KTOP.Helper": "1.0.0-*",
+    "KTOP.EBookReader": "1.5.0-*",
+    "KTOP.Helper": "1.5.0-*",
     "NHazm": "1.0.0-*",
     "System.Threading.Tasks.Parallel": "4.0.1"
   },
