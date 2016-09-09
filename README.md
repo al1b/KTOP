@@ -52,9 +52,21 @@ Linux and Mac:
 ./KTOP.CLI "./csharp.epub"
 ```
 
+## Download
+| Operating System       | Binary Release          | Size (MB)|Type         |
+| :------------- |:-------------|:-------------|:-------------|
+|Microsoft Windows 7, 8, 8.1, 10|[KTOP.1.5.0b.exe](https://github.com/al1b/KTOP/releases/download/v1.5.0b/KTOP.1.5.0b.exe)|14.8|Setup Installer|
+|Debian 8|[KTOP.1.5.0b-debian8-x64.tar.gz](https://github.com/al1b/KTOP/releases/download/v1.5.0b/KTOP.1.5.0b-debian8-x64.tar.gz)|18.7| tar.gz archive|
+|Ubuntu 14.04|[KTOP.1.5.0b-ubuntu.14.04-x64.tar.gz](https://github.com/al1b/KTOP/releases/download/v1.5.0b/KTOP.1.5.0b-ubuntu.14.04-x64.tar.gz)|18.6| tar.gz archive|
+|Ubuntu 16.04|[KTOP.1.5.0b-ubuntu.16.04-x64.tar.gz](https://github.com/al1b/KTOP/releases/download/v1.5.0b/KTOP.1.5.0b-ubuntu.16.04-x64.tar.gz)|18.6| tar.gz archive|
+|Mac OSX 10.10|[MacOSX10.10-x64.zip](https://github.com/al1b/KTOP/releases/download/v1.5.0b/KTOP.1.5.0b-MacOSX10.10-x64.zip)|18.1| zip archive|
+
+
 ## Requirements
 
-*KTOP* is written in Microsoft C# and [.NET Core](https://github.com/dotnet/core) and it can be run on Linux, Mac OSX and Microsoft Windows. You need to download and install .NET Core on your os.
+*KTOP* is written in Microsoft C# and [.NET Core](https://github.com/dotnet/core) and it can be run on Linux, Mac OSX and Microsoft Windows. It is published as a self-contained application and it **must not need any requirements on your computer**.
+
+It is recommended to download the proper binary for your OS, if any errors happened at the running try to install .NET Core on your computer. 
 
 ***Windows:***
 Download and install [.NET Core](https://go.microsoft.com/fwlink/?LinkID=809109)
