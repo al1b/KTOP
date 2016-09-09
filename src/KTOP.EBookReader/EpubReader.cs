@@ -66,7 +66,7 @@ namespace KTOP.EBookReader
         private void FindTextFiles()
         {
             // ContainerXML
-            var container = XDocument.Load(_tempDir + @"\META-INF\container.xml");
+            var container = XDocument.Load(FileHelper.FixPathSeperator(_tempDir + @"META-INF\container.xml"));
             var rootFile = container.XPathSelectElement("//*[local-name()='rootfile']");
             _opfPath = _tempDir + rootFile.Attribute("full-path").Value;
 
@@ -82,7 +82,7 @@ namespace KTOP.EBookReader
                 var attr = i.Attribute("href");
                 if (attr != null && !string.IsNullOrEmpty(attr.Value))
                 {
-                    var path = Path.Combine(_rootPath, attr.Value.Replace("/", "\\"));
+                    var path = FileHelper.FixPathSeperator(Path.Combine(_rootPath, attr.Value));
                     if (File.Exists(path))
                         _files.Add(path);
                 }

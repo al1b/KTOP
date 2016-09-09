@@ -46,10 +46,10 @@ Example:
 
 ```
 Windows:
-KTOP.exe "d:/my-books/programming/csharp.epub"
+KTOP.CLI.exe "d:/my-books/programming/csharp.epub"
 
 Linux and Mac:
-./KTOP "./csharp.epub"
+./KTOP.CLI "./csharp.epub"
 ```
 
 ## Requirements
@@ -71,6 +71,10 @@ Depend on what distro you are using you need to install .NET Core runtime.
 ***Mac OS X:***
 [.NET Core For Mac OS X 10.11](http://www.microsoft.com/net/core#macos)
 
+
+## Build and run the source code
+
+https://github.com/al1b/KTOP/wiki/Build-and-Debug-the-source
 
 
 ## Roadmap

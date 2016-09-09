@@ -58,9 +58,6 @@ namespace KTOP.CLI
             finally
             {
                 watch.Stop();
-
-                Console.WriteLine("Press any key to continnue.");
-                Console.ReadLine();
             }
 
 
