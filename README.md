@@ -78,4 +78,4 @@ Depend on what distro you are using you need to install .NET Core runtime.
 
 1. Support `azw3` and `mobi` formats.
 2. Graphical User Interface rather than CLI
-3. ~~Compatibility with Mono or DOTNet Core ( be able to run on Linux or Mac )~~
+3. ~~Compatibility with Mono or .NET Core ( be able to run on Linux or Mac )~~ It's now cross-platform.
