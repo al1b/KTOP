@@ -34,7 +34,7 @@ By using *KTOP* you can optimize your eBooks to display properly and nicely on K
 
 KTOP has a command line interface at the moment which is really easy to use.
 
-It has 3 options:
+Options:
 
 | Option       | Description          |
 | :------------- |:-------------|
