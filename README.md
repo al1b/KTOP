@@ -55,11 +55,11 @@ Linux and Mac:
 ## Download
 | Operating System       | Binary Release          | Size (MB)|Type         |
 | :------------- |:-------------|:-------------|:-------------|
-|Microsoft Windows 7, 8, 8.1, 10|[KTOP.1.5.0b.exe](https://github.com/al1b/KTOP/releases/download/v1.5.0b/KTOP.1.5.0b.exe)|14.8|Setup Installer|
-|Debian 8|[KTOP.1.5.0b-debian8-x64.tar.gz](https://github.com/al1b/KTOP/releases/download/v1.5.0b/KTOP.1.5.0b-debian8-x64.tar.gz)|18.7| tar.gz archive|
-|Ubuntu 14.04|[KTOP.1.5.0b-ubuntu.14.04-x64.tar.gz](https://github.com/al1b/KTOP/releases/download/v1.5.0b/KTOP.1.5.0b-ubuntu.14.04-x64.tar.gz)|18.6| tar.gz archive|
-|Ubuntu 16.04|[KTOP.1.5.0b-ubuntu.16.04-x64.tar.gz](https://github.com/al1b/KTOP/releases/download/v1.5.0b/KTOP.1.5.0b-ubuntu.16.04-x64.tar.gz)|18.6| tar.gz archive|
-|Mac OSX 10.10|[MacOSX10.10-x64.zip](https://github.com/al1b/KTOP/releases/download/v1.5.0b/KTOP.1.5.0b-MacOSX10.10-x64.zip)|18.1| zip archive|
+|Microsoft Windows 7, 8, 8.1, 10|[KTOP.1.5.1b.exe](https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b.exe)|14.8|Setup Installer|
+|Debian 8|[KTOP.1.5.1b-debian8-x64.tar.gz](https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b-debian.8-x64.tar.gz)|18.7| tar.gz archive|
+|Ubuntu 14.04|[KTOP.1.5.1b-ubuntu.14.04-x64.tar.gz](https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b-ubuntu.14.04-x64.tar.gz)|18.6| tar.gz archive|
+|Ubuntu 16.04|[KTOP.1.5.1b-ubuntu.16.04-x64.tar.gz](https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b-ubuntu.16.04-x64.tar.gz)|18.6| tar.gz archive|
+|Mac OSX 10.10|[MacOSX10.10-x64.zip](https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b-osx.10.10-x64.zip)|18.1| zip archive|
 
 
 ## Requirements
