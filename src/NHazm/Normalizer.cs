@@ -18,7 +18,7 @@ namespace NHazm
         private string _puncAfter = @"!:\.،؛؟»\]\)\}";
         private string _puncBefore = @"«\[\(\{";
 
-        private MakeTrans _translations;
+        //private MakeTrans _translations;
 
         public Normalizer()
             : this(true, true, true)
@@ -31,7 +31,7 @@ namespace NHazm
             this._punctuationSpacing = punctuationSpacing;
             this._affixSpacing = affixSpacing;
 
-            this._translations = new MakeTrans(" ;%1234567890", " ؛٪۱۲۳۴۵۶۷۸۹۰");
+            //this._translations = new MakeTrans(" ;%", " ؛٪");
 
 
             Regex r = new Regex("");
@@ -91,7 +91,7 @@ namespace NHazm
 
         private string CharacterRefinement(string text)
         {
-            text = this._translations.Translate(text);
+            //text = this._translations.Translate(text);
             foreach (var pattern in this._characterRefinementPatterns)
                 text = pattern.Apply(text);
             return text;

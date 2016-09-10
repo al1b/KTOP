@@ -30,7 +30,7 @@ namespace KTOP.CLI
                 args = args.Where((a) => a.Trim() != string.Empty)
                            .ToArray();
 
-                if (args.Length == 0 || args[0] == "--help" || args[1] == "-h" || args[0] == "/?")
+                if (args.Length == 0 || args[0] == "--help" || args[0] == "-h" || args[0] == "/?")
                 {
                     PrintHelp();
                     return;
@@ -86,7 +86,7 @@ KTOP.CLI.exe fileName  [--persian, --arabic]
         /// <returns></returns>
         static BookEngineConfig CreateConfig(string[] args)
         {
-            if (args.Length == 1 || args[1].ToLower() == "--persian")
+            if (args.Length == 1)
                 return new BookEngineConfig()
                 {
                     FixArabicYeKe = true,
@@ -95,7 +95,7 @@ KTOP.CLI.exe fileName  [--persian, --arabic]
                 };
 
 
-            if (args.Length == 1 || args[1].ToLower() == "--arabic")
+            if (args.Length >= 2 || args[1].ToLower() == "--arabic")
                 return new BookEngineConfig()
                 {
                     FixArabicYeKe = false,

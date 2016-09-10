@@ -15,7 +15,7 @@ namespace KTOP.Base
         #region fields
         private IContainer _container;
         private ILogger _logger;
-        private NHazm.Normalizer _normalizer;
+        //private NHazm.Normalizer _normalizer;
         #endregion
 
         #region properties
@@ -27,7 +27,7 @@ namespace KTOP.Base
         {
             //_spellChecker = new SpellChecker();
             _logger = logger;
-            _normalizer = new NHazm.Normalizer(true, true, true);
+            //_normalizer = new NHazm.Normalizer(true, true, true);
 
             RegisterTypes();
         }
@@ -109,8 +109,8 @@ namespace KTOP.Base
                 if (Config.FixArabicYeKe)
                     fileStr = FixArabicKeYe(fileStr);
 
-                if (Config.FixVirtualSpaceAndPrefixSuffixes)
-                    fileStr = _normalizer.Run(fileStr);
+                //if (Config.FixVirtualSpaceAndPrefixSuffixes)
+                //    fileStr = _normalizer.Run(fileStr);
 
                 if (Config.PersianShape)
                     fileStr = PersianShape(fileStr);

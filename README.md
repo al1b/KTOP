@@ -95,3 +95,4 @@ https://github.com/al1b/KTOP/wiki/Build-and-Debug-the-source
 1. Support `azw3` and `mobi` formats.
 2. Graphical User Interface rather than CLI
 3. ~~Compatibility with Mono or .NET Core ( be able to run on Linux or Mac )~~ It's now cross-platform.
+4. Create repo-package for other Operating Systems.
