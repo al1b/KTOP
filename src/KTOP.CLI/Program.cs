@@ -21,7 +21,7 @@ namespace KTOP.CLI
             builder.RegisterType<ConsoleLogger>().As<ILogger>();
             builder.RegisterType<BookEngine>().As<IBookEngine>();
             var container = builder.Build();
-
+            
             var watch = new Stopwatch();
             watch.Start();
 
