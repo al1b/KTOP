@@ -52,7 +52,6 @@ namespace KTOP.CLI
                 // input file is absolutely required, proccess cannot continue without file
                 if (fileInput.HasValue() == false || string.IsNullOrEmpty(fileInput.Value()))
                 {
-                    Console.WriteLine("Error: eBook file is not specified.\r\n");
                     app.ShowHelp();
                     return 1;
                 }
