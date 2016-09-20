@@ -81,6 +81,16 @@ namespace KTOP.CLI
                     Console.WriteLine(ex.Message);
                     return 0;
                 }
+                catch (FileNotFoundException)
+                {
+                    Console.WriteLine($"Could not find file '{fileInput.Value()}'.");
+                    return 0;
+                }
+                catch (UnauthorizedAccessException)
+                {
+                    Console.WriteLine($"File '{fileInput.Value()}' access denied.");
+                    return 0;
+                }
                 catch (Exception ex)
                 {
                     Console.WriteLine("Error, unfortunatelly something went wrong. You can check log file next to your epub file");
