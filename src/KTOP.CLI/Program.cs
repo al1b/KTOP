@@ -74,7 +74,9 @@ namespace KTOP.CLI
                 {
                     var book = bookEngine.ProcessBook(fileInput.Value());
                     var outputPath = fileOuput.HasValue() ? fileOuput.Value() : null;
-                    book.SaveAs(outputPath);
+                    var savedPath = book.SaveAs(outputPath);
+
+                    Console.WriteLine($"Congratulations, operation was successful, File saved at '{savedPath}'.");
                 }
                 catch (Base.Exceptions.EBookFormatNotSupported ex)
                 {
