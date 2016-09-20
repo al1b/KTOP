@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using KTOP.Base.Exceptions;
 using KTOP.EBookReader;
 using System;
 using System.Collections.Generic;
@@ -95,7 +96,12 @@ namespace KTOP.Base
         public IEBook ProcessBook(string bookPath)
         {
 
-            IEBook book = (IEBook)_container.Resolve(GetEbookType(bookPath));
+            if(GetEbookType(bookPath) == null)
+                throw new EBookFormatNotSupported($"eBook `{bookPath}` is not supported.");
+
+            IEBook book = _container.Resolve(GetEbookType(bookPath)) as IEBook;
+
+                    
             book.LoadFile(bookPath);
 
             _logger.Info($"{book.Files.Count} files to process.");

@@ -16,6 +16,7 @@
     "Autofac": "4.0.0",
     "KTOP.Base": "1.5.1-*",
     "KTOP.Helper": "1.5.0-*",
+    "Microsoft.Extensions.CommandLineUtils": "1.0.0",
     "Microsoft.NETCore.App": {
       "type": "platform",
       "version": "1.0.0"

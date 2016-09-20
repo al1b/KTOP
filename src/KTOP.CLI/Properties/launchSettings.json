@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "KTOP.CLI": {
+      "commandName": "Project",
+      "commandLineArgs": "--input ali.epub"
+    }
+  }
+}
