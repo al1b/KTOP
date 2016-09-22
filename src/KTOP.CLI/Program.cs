@@ -34,7 +34,7 @@ namespace KTOP.CLI
         /// <param name="inputFile"></param>
         /// <param name="outputFile"></param>
         /// <returns></returns>
-        static bool CheckOutputPath(CommandOption inputFile, CommandOption outputFile)
+        static bool CheckOutputPath(CommandOption inputFile, CommandOption outputFile, CommandOption overwrite)
         {
             // input file and output file are the same, make a backup
             if (Path.GetFullPath(inputFile.Value()) == Path.GetFullPath(outputFile.Value()))
@@ -44,7 +44,7 @@ namespace KTOP.CLI
             }
 
             // output file might be exists, we need to ask a permission to overwrite it
-            if (File.Exists(outputFile.Value()))
+            if (File.Exists(outputFile.Value()) && !overwrite.HasValue())
             {
                 Console.WriteLine($"Warning: The output file already exists. Overwrite it? (y/n)");
                 while (true)
@@ -85,21 +85,23 @@ namespace KTOP.CLI
             var noOptOption = cli.Option("-n|--no-optimize", "Will not optmize the eBook.", CommandOptionType.NoValue);
             var fixArabicOption = cli.Option("-f|--fix-arabic-yeh-kaf", "Replace all Arabic Yeh and Kaf with Persian ones.", CommandOptionType.NoValue);
 
-            var fileInput = cli.Option("-i|--input", "(Required)The path of input file.", CommandOptionType.SingleValue);
-            var fileOuput = cli.Option("-o|--output", "(Optional)Path of output file.", CommandOptionType.SingleValue);
+            var inputFile = cli.Option("-i|--input", "(Required)The path of input file.", CommandOptionType.SingleValue);
+            var outputFile = cli.Option("-o|--output", "(Optional)Path of output file.", CommandOptionType.SingleValue);
+
+            var overwrite = cli.Option("-r|--overwrite", "Overwrite the output file if output file already exists", CommandOptionType.NoValue);
 
             // commands
             cli.OnExecute(() =>
             {
                 // input file is absolutely required, proccess cannot continue without file
-                if (fileInput.HasValue() == false || string.IsNullOrEmpty(fileInput.Value()))
+                if (inputFile.HasValue() == false || string.IsNullOrEmpty(inputFile.Value()))
                 {
                     cli.ShowHelp();
                     return 1;
                 }
 
                 // check output file
-                if (fileOuput.HasValue() && !CheckOutputPath(fileInput, fileOuput))
+                if (outputFile.HasValue() && !CheckOutputPath(inputFile, outputFile, overwrite))
                     return 0;
 
                 var builder = new ContainerBuilder();
@@ -118,8 +120,8 @@ namespace KTOP.CLI
 
                 try
                 {
-                    var book = bookEngine.ProcessBook(fileInput.Value());
-                    var outputPath = fileOuput.HasValue() ? fileOuput.Value() : null;
+                    var book = bookEngine.ProcessBook(inputFile.Value());
+                    var outputPath = outputFile.HasValue() ? outputFile.Value() : null;
                     var savedPath = book.SaveAs();
 
                     if (outputPath != null)
@@ -138,19 +140,19 @@ namespace KTOP.CLI
                 }
                 catch (FileNotFoundException)
                 {
-                    Console.WriteLine($"Could not find file '{fileInput.Value()}'.");
+                    Console.WriteLine($"Could not find file '{inputFile.Value()}'.");
                     return 0;
                 }
                 catch (UnauthorizedAccessException)
                 {
-                    Console.WriteLine($"File '{fileInput.Value()}' access denied.");
+                    Console.WriteLine($"File '{inputFile.Value()}' access denied.");
                     return 0;
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine("Error, unfortunatelly something went wrong. You can check log file next to your epub file");
 
-                    var logPath = FileHelper.LogFileName(fileInput.Value(), "errors.txt");
+                    var logPath = FileHelper.LogFileName(inputFile.Value(), "errors.txt");
                     if (File.Exists(logPath))
                         File.Delete(logPath);
 
