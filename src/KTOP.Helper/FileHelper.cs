@@ -51,7 +51,18 @@ namespace KTOP.Helper
             var file = new FileInfo(filePath);
             var nameWithoutExt = Path.GetFileNameWithoutExtension(filePath);
 
-            return $@"{file.DirectoryName}{Path.DirectorySeparatorChar}{nameWithoutExt}-{DateTime.Now.ToFileTime()}{file.Extension}";
+            var pathBuilder = new StringBuilder();
+            pathBuilder.Append(file.DirectoryName);
+
+            if (file.DirectoryName[file.DirectoryName.Length - 1] != Path.DirectorySeparatorChar)
+                pathBuilder.Append(Path.DirectorySeparatorChar);
+
+            pathBuilder.Append(nameWithoutExt);
+            pathBuilder.Append("--");
+            pathBuilder.Append(DateTime.Now.ToFileTime());
+            pathBuilder.Append(file.Extension);
+
+            return pathBuilder.ToString();
         }
 
         /// <summary>

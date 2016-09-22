@@ -28,33 +28,79 @@ namespace KTOP.CLI
             }
         }
 
+        /// <summary>
+        /// Create a backup file if input and output path are the same, also ask question to overwrite the file
+        /// </summary>
+        /// <param name="inputFile"></param>
+        /// <param name="outputFile"></param>
+        /// <returns></returns>
+        static bool CheckOutputPath(CommandOption inputFile, CommandOption outputFile)
+        {
+            // input file and output file are the same, make a backup
+            if (Path.GetFullPath(inputFile.Value()) == Path.GetFullPath(outputFile.Value()))
+            {
+                File.Copy(inputFile.Value(), FileHelper.FileNameWithTimeStamp(inputFile.Value() + ".bak"), true);
+                return true;
+            }
+
+            // output file might be exists, we need to ask a permission to overwrite it
+            if (File.Exists(outputFile.Value()))
+            {
+                Console.WriteLine($"Warning: The output file already exists. Overwrite it? (y/n)");
+                while (true)
+                {
+                    var overwriteInput = Console.ReadLine().ToLower();
+
+                    // abort the opertaion
+                    if (overwriteInput[0] == 'n')
+                    {
+                        Console.WriteLine("Operation was canceled by user.");
+                        return false;
+                    }
+
+                    if (overwriteInput[0] == 'y')
+                        return true;
+                }
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// CLI
+        /// </summary>
+        /// <returns></returns>
         static CommandLineApplication CreateCommandLineInterface()
         {
-            var app = new CommandLineApplication
+            var cli = new CommandLineApplication
             {
                 Name = "ktop",
                 FullName = "KTOP - Kindle Text Optimization for Persian eBooks By Ali Bahraminezhad\r\nhttps://github.com/al1b/KTOP"
             };
 
-            app.HelpOption("-?|-h|--help");
-            app.Description = "Evaluates arguments with the operation specified.";
+            cli.HelpOption("-?|-h|--help");
+            cli.Description = "Evaluates arguments with the operation specified.";
 
             // options
-            var noOptOption = app.Option("-n|--no-optimize", "Will not optmize the eBook.", CommandOptionType.NoValue);
-            var fixArabicOption = app.Option("-f|--fix-arabic-yeh-kaf", "Replace all Arabic Yeh and Kaf with Persian ones.", CommandOptionType.NoValue);
+            var noOptOption = cli.Option("-n|--no-optimize", "Will not optmize the eBook.", CommandOptionType.NoValue);
+            var fixArabicOption = cli.Option("-f|--fix-arabic-yeh-kaf", "Replace all Arabic Yeh and Kaf with Persian ones.", CommandOptionType.NoValue);
 
-            var fileInput = app.Option("-i|--input", "(Required)The path of input file.", CommandOptionType.SingleValue);
-            var fileOuput = app.Option("-o|--output", "(Optional)Path of output file.", CommandOptionType.SingleValue);
+            var fileInput = cli.Option("-i|--input", "(Required)The path of input file.", CommandOptionType.SingleValue);
+            var fileOuput = cli.Option("-o|--output", "(Optional)Path of output file.", CommandOptionType.SingleValue);
 
             // commands
-            app.OnExecute(() =>
+            cli.OnExecute(() =>
             {
                 // input file is absolutely required, proccess cannot continue without file
                 if (fileInput.HasValue() == false || string.IsNullOrEmpty(fileInput.Value()))
                 {
-                    app.ShowHelp();
+                    cli.ShowHelp();
                     return 1;
                 }
+
+                // check output file
+                if (fileOuput.HasValue() && !CheckOutputPath(fileInput, fileOuput))
+                    return 0;
 
                 var builder = new ContainerBuilder();
                 builder.RegisterType<ConsoleLogger>().As<ILogger>();
@@ -74,7 +120,14 @@ namespace KTOP.CLI
                 {
                     var book = bookEngine.ProcessBook(fileInput.Value());
                     var outputPath = fileOuput.HasValue() ? fileOuput.Value() : null;
-                    var savedPath = book.SaveAs(outputPath);
+                    var savedPath = book.SaveAs();
+
+                    if (outputPath != null)
+                    {
+                        File.Copy(savedPath, outputPath, true);
+                        File.Delete(savedPath);
+                        savedPath = Path.GetFullPath(outputPath);
+                    }
 
                     Console.WriteLine($"Congratulations, operation was successful, File saved at '{savedPath}'.");
                 }
@@ -114,7 +167,10 @@ namespace KTOP.CLI
                 return 1;
             });
 
-            return app;
+
+            // return cli
+            return cli;
         }
+
     }
 }
