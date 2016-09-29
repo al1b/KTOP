@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>KTOP by al1b</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>KTOP</h1>
+        <h2>Kindle Text Optimizer for Persian eBooks</h2>
+        <a href="https://github.com/al1b/KTOP" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="ktop" class="anchor" href="#ktop" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>KTOP</h1>
+
+<p>Kindle Text Optimizer for Persian eBooks.</p>
+
+<h2>
+<a id="what-is-ktop-what-does-it-do" class="anchor" href="#what-is-ktop-what-does-it-do" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is KTOP? What does it do?</h2>
+
+<p>KTOP is a tool for making Persian eBooks ( EPUBs for now ) compatible to E-Readers such as Kindle. By releasing <a href="https://www.amazon.com/gp/feature.html?docId=1000729511">KF8</a> by Amazon, Kindle devices are be able to display right-to-left Persian and Arabic books. Unfortunately the default font of Kindle is not really good and it has also several drawbacks.</p>
+
+<p><strong>Default Font:</strong></p>
+
+<p><img src="https://al1b.github.io/KTOP/kindle-default-font.jpg" alt="Default Font"> </p>
+
+<p>Books can be published with embedded fonts but Amazon Kindle won't display Persian and Arabic eBooks properly with embedded fonts and It will display characters separated.</p>
+
+<p><img src="https://al1b.github.io/KTOP/kindle-seperated-persian-text.jpg" alt="separated letters"> </p>
+
+<p>By using <em>KTOP</em> you can optimize your eBooks to display properly and nicely on Kindle e-Ink devices.</p>
+
+<p><strong>Optimized version:</strong></p>
+
+<p><img src="https://al1b.github.io/KTOP/kindle-persian-text-optmized.jpg" alt="separated letters"> </p>
+
+<h2>
+<a id="sample-outputs" class="anchor" href="#sample-outputs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sample outputs</h2>
+
+<table>
+<thead>
+<tr>
+<th align="center">Default font</th>
+<th align="center">Custom font</th>
+<th align="center">Optimized by <strong><em>KTOP</em></strong> - Custom font</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img src="https://al1b.github.io/KTOP/02-default-font.jpg" alt="Default font"></td>
+<td align="center"><img src="https://al1b.github.io/KTOP/03-custom-font.jpg" alt="Custom font"></td>
+<td align="center"><img src="https://al1b.github.io/KTOP/01-optimized.jpg" alt="Optimized font"></td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use</h2>
+
+<p>KTOP has a command line interface at the moment which is really easy to use.</p>
+
+<p>Options:</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Option</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">--persian</td>
+<td align="left">Optimize the book for Kindle, Replace all Arabic characters</td>
+</tr>
+<tr>
+<td align="left">--arabic</td>
+<td align="left">Optimize the book for Arabic books</td>
+</tr>
+</tbody>
+</table>
+
+<p>Example:</p>
+
+<pre><code>Windows:
+KTOP.CLI.exe "d:/my-books/programming/csharp.epub"
+
+Linux and Mac:
+./KTOP.CLI "./csharp.epub"
+</code></pre>
+
+<h2>
+<a id="download" class="anchor" href="#download" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Download</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">Operating System</th>
+<th align="left">Binary Release</th>
+<th align="left">Size (MB)</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Microsoft Windows 7, 8, 8.1, 10</td>
+<td align="left"><a href="https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b.exe">KTOP.1.5.1b.exe</a></td>
+<td align="left">14.8</td>
+<td align="left">Setup Installer</td>
+</tr>
+<tr>
+<td align="left">Debian 8</td>
+<td align="left"><a href="https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b-debian.8-x64.tar.gz">KTOP.1.5.1b-debian8-x64.tar.gz</a></td>
+<td align="left">18.7</td>
+<td align="left">tar.gz archive</td>
+</tr>
+<tr>
+<td align="left">Ubuntu 14.04</td>
+<td align="left"><a href="https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b-ubuntu.14.04-x64.tar.gz">KTOP.1.5.1b-ubuntu.14.04-x64.tar.gz</a></td>
+<td align="left">18.6</td>
+<td align="left">tar.gz archive</td>
+</tr>
+<tr>
+<td align="left">Ubuntu 16.04</td>
+<td align="left"><a href="https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b-ubuntu.16.04-x64.tar.gz">KTOP.1.5.1b-ubuntu.16.04-x64.tar.gz</a></td>
+<td align="left">18.6</td>
+<td align="left">tar.gz archive</td>
+</tr>
+<tr>
+<td align="left">Mac OSX 10.10</td>
+<td align="left"><a href="https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b-osx.10.10-x64.zip">MacOSX10.10-x64.zip</a></td>
+<td align="left">18.1</td>
+<td align="left">zip archive</td>
+</tr>
+<tr>
+<td align="left">ArchLinux</td>
+<td align="left"><a href="https://aur.archlinux.org/packages/ktop-git/">AUR Package</a></td>
+<td align="left">N/A</td>
+<td align="left">AUR Package</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h2>
+
+<p><em>KTOP</em> is written in Microsoft C# and <a href="https://github.com/dotnet/core">.NET Core</a> and it can be run on Linux, Mac OSX and Microsoft Windows. It is published as a self-contained application and it <strong>must not need any requirements on your computer</strong>.</p>
+
+<p>It is recommended to download the proper binary for your OS, if any errors happened at the running try to install .NET Core on your computer. </p>
+
+<p><strong><em>Windows:</em></strong>
+Download and install <a href="https://go.microsoft.com/fwlink/?LinkID=809109">.NET Core</a></p>
+
+<p><strong><em>Linux:</em></strong>
+Depend on what distro you are using you need to install .NET Core runtime.</p>
+
+<ol>
+<li><a href="http://www.microsoft.com/net/core#ubuntu">.NET Core Ubuntu 14.04, 16.04 &amp; Linux Mint 17</a></li>
+<li><a href="http://www.microsoft.com/net/core#debian">.NET Core Debian 8</a></li>
+<li><a href="http://www.microsoft.com/net/core#fedora">.NET Core Fedora 23</a></li>
+<li><a href="http://www.microsoft.com/net/core#centos">.NET Core CentOS 7.1 &amp; Oracle Linux 7.1</a></li>
+<li><a href="http://www.microsoft.com/net/core#opensuse">.NET Core openSUSE 13.2</a></li>
+</ol>
+
+<p><strong><em>Mac OS X:</em></strong>
+<a href="http://www.microsoft.com/net/core#macos">.NET Core For Mac OS X 10.11</a></p>
+
+<h2>
+<a id="build-and-run-the-source-code" class="anchor" href="#build-and-run-the-source-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Build and run the source code</h2>
+
+<p><a href="https://github.com/al1b/KTOP/wiki/Build-and-Debug-the-source">https://github.com/al1b/KTOP/wiki/Build-and-Debug-the-source</a></p>
+
+<h2>
+<a id="roadmap" class="anchor" href="#roadmap" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Roadmap</h2>
+
+<ol>
+<li>Support <code>azw3</code> and <code>mobi</code> formats.</li>
+<li>Graphical User Interface rather than CLI</li>
+<li>
+<del>Compatibility with Mono or .NET Core ( be able to run on Linux or Mac )</del> It's now cross-platform.</li>
+<li>Create repo-package for other Operating Systems.</li>
+</ol>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/al1b/KTOP/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/al1b/KTOP/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/al1b/KTOP"></a> is maintained by <a href="https://github.com/al1b">al1b</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
