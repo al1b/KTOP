@@ -59,6 +59,7 @@ Linux and Mac:
 |Ubuntu 14.04|[KTOP.1.5.1b-ubuntu.14.04-x64.tar.gz](https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b-ubuntu.14.04-x64.tar.gz)|18.6| tar.gz archive|
 |Ubuntu 16.04|[KTOP.1.5.1b-ubuntu.16.04-x64.tar.gz](https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b-ubuntu.16.04-x64.tar.gz)|18.6| tar.gz archive|
 |Mac OSX 10.10|[MacOSX10.10-x64.zip](https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b-osx.10.10-x64.zip)|18.1| zip archive|
+|ArchLinux|[AUR Package](https://aur.archlinux.org/packages/ktop-git/)| N/A | AUR Package |
 
 
 ## Requirements
