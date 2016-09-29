@@ -33,42 +33,34 @@ By using *KTOP* you can optimize your eBooks to display properly and nicely on K
 
 KTOP has a command line interface at the moment which is really easy to use.
 
-Options:
+```
+Usage: ktop [options]
 
-| Option       | Description          |
-| :------------- |:-------------|
-|--persian|Optimize the book for Kindle, Replace all Arabic characters|
-|--arabic|Optimize the book for Arabic books|
+Options:
+  -i|--input               (Required)The path of input file.
+  -o|--output              (Optional)Path of output file.
+  -r|--overwrite           Overwrite the output file if output file already exists
+  -f|--fix-arabic-yeh-kaf  Replace all Arabic Yeh and Kaf with Persian ones.    
+  -n|--no-optimize         Will not optmize the eBook.  
+  -?|-h|--help             Show help information
+```
 
 Example:
 
 
 ```
 Windows:
-KTOP.CLI.exe "d:/my-books/programming/csharp.epub"
+KTOP -i "d:/my-books/programming/csharp.epub"
+KTOP -input "./csharp.epub" -output "opt-csharp.epub"
 
 Linux and Mac:
-./KTOP.CLI "./csharp.epub"
+./KTOP.CLI -i "./csharp.epub"
 ```
-
-## Download
-| Operating System       | Binary Release          | Size (MB)|Type         |
-| :------------- |:-------------|:-------------|:-------------|
-|Microsoft Windows 7, 8, 8.1, 10|[KTOP.1.5.1b.exe](https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b.exe)|14.8|Setup Installer|
-|Debian 8|[KTOP.1.5.1b-debian8-x64.tar.gz](https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b-debian.8-x64.tar.gz)|18.7| tar.gz archive|
-|Ubuntu 14.04|[KTOP.1.5.1b-ubuntu.14.04-x64.tar.gz](https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b-ubuntu.14.04-x64.tar.gz)|18.6| tar.gz archive|
-|Ubuntu 16.04|[KTOP.1.5.1b-ubuntu.16.04-x64.tar.gz](https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b-ubuntu.16.04-x64.tar.gz)|18.6| tar.gz archive|
-|Mac OSX 10.10|[MacOSX10.10-x64.zip](https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b-osx.10.10-x64.zip)|18.1| zip archive|
 
 
 ## Requirements
 
-*KTOP* is written in Microsoft C# and [.NET Core](https://github.com/dotnet/core) and it can be run on Linux, Mac OSX and Microsoft Windows. It is published as a self-contained application and it **must not need any requirements on your computer**.
-
-It is recommended to download the proper binary for your OS, if any errors happened at the running try to install .NET Core on your computer. 
-
-***Windows:***
-Download and install [.NET Core](https://go.microsoft.com/fwlink/?LinkID=809109)
+*KTOP* is written in Microsoft C# and [.NET Core](https://github.com/dotnet/core) and it can be run on Linux, Mac OSX and Microsoft Windows. If you are on Linux or Mac need to install .NET Core on you PC.
 
 ***Linux:***
 Depend on what distro you are using you need to install .NET Core runtime.
@@ -82,6 +74,37 @@ Depend on what distro you are using you need to install .NET Core runtime.
 ***Mac OS X:***
 [.NET Core For Mac OS X 10.11](http://www.microsoft.com/net/core#macos)
 
+
+## Download and Install
+| Operating System       | Binary Release          | Size (MB)|Type         |
+| :------------- |:-------------|:-------------|:-------------|
+|Microsoft Windows 7, 8, 8.1, 10|[KTOP.1.6.1b.exe](https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b.exe)|14.8|Setup Installer|
+|Debian 8|[KTOP.1.5.1b-debian8-x64.tar.gz](https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b-debian.8-x64.tar.gz)|18.7| tar.gz archive|
+|Ubuntu 14.04|[KTOP.1.5.1b-ubuntu.14.04-x64.tar.gz](https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b-ubuntu.14.04-x64.tar.gz)|18.6| tar.gz archive|
+|Ubuntu 16.04|[KTOP.1.5.1b-ubuntu.16.04-x64.tar.gz](https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b-ubuntu.16.04-x64.tar.gz)|18.6| tar.gz archive|
+|Mac OSX 10.10|[MacOSX10.10-x64.zip](https://github.com/al1b/KTOP/releases/download/v1.5.1b/KTOP.1.5.1b-osx.10.10-x64.zip)|18.1| zip archive|
+
+
+
+## Change Logs
+---
+
+***Sep 22, 2016 - v1.6.0b***
+1. Command line interface is completely refactored!
+2. A new option has added to CLI, you are now be able to define output path.
+3. Some minor and major bugs fixed.
+
+***Sep 10, 2016 - v1.5.1bb***
+1. Some minor bugs fixed
+
+***Sep 09, 2016 - v1.5.0b***
+1. Made Command line interface simpler
+2. KTOP now supports Linux, Mac and Windows
+
+***Aug 12, 2016 - 1.0.0b***
+1. Release the first version
+
+***
 
 ## Build and run the source code
 
