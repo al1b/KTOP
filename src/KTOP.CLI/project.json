@@ -3,13 +3,22 @@
   "buildOptions": {
     "emitEntryPoint": true
   },
+
+   "runtimes": {
+    // "debian.8-x64": {},
+    // "ubuntu.14.04-x64": {},
+    // "ubuntu.16.04-x64": {},
+    // "osx.10.10-x64": {},
+     "win7-x64": {}
+   },
+
   "dependencies": {
     "Autofac": "4.0.0",
     "KTOP.Base": "1.5.1-*",
     "KTOP.Helper": "1.5.0-*",
     "Microsoft.Extensions.CommandLineUtils": "1.0.0",
     "Microsoft.NETCore.App": {
-      "type": "platform",
+      //"type": "platform",
       "version": "1.0.0"
     }
   },
