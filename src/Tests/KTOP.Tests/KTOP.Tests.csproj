@@ -16,12 +16,11 @@
     <ProjectReference Include="..\..\KTOP.Helper\KTOP.Helper.csproj" />
     <ProjectReference Include="..\..\KTOP.Base\KTOP.Base.csproj" />
     <ProjectReference Include="..\..\ArabicShaping\ArabicShaping.csproj" />
+    <TestAssemblies Include="**/bin/**/*.tests.dll" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
-    <PackageReference Include="xunit.abstractions" Version="2.0.1" />
-    <PackageReference Include="xunit.extensibility.core" Version="2.2.0" />
     <PackageReference Include="xunit.runner.console" Version="2.2.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
     <PackageReference Include="xunit" Version="2.2.0" />
