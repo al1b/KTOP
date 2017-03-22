@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <VersionPrefix>1.6.0</VersionPrefix>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
     <AssemblyName>KTOP.CLI</AssemblyName>
     <OutputType>Exe</OutputType>
     <PackageId>KTOP.CLI</PackageId>
