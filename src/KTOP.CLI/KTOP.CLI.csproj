@@ -6,7 +6,7 @@
     <AssemblyName>KTOP.CLI</AssemblyName>
     <OutputType>Exe</OutputType>
     <PackageId>KTOP.CLI</PackageId>
-    <RuntimeFrameworkVersion>1.0.4</RuntimeFrameworkVersion>
+    <RuntimeFrameworkVersion>1.*</RuntimeFrameworkVersion>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
