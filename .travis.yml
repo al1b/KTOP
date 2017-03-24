@@ -1,0 +1,9 @@
+language: csharp
+solution: KTOP.sln
+dotnet: 1.0.1
+install:
+  - dotnet restore KTOP.sln
+  - dotnet install xunit.runners -Version 1.9.2 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=Release KTOP.sln
+  - mono ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./Tests/KTOP.Tests/bin/Release/Tests/KTOP.Tests.dll
