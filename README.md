@@ -1,6 +1,9 @@
 # KTOP
 Kindle Text Optimizer for Persian eBooks. 
 
+This project is **[deprecated]** and it won't maintained anymore. I created a new `Calibre` plugin which cales KiPEO. It's much easier to use. You can find it here: 
+https://github.com/al1b/Calibre-KiPEO
+
 [![Build status](https://ci.appveyor.com/api/projects/status/9t5spfjdxwc7c08u?svg=true)](https://ci.appveyor.com/project/al1b/ktop)
 
 ## What is KTOP? What does it do?
